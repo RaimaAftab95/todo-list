@@ -38,8 +38,8 @@ const li = document.createElement("li");
 // we can also add style here as whole html code is passing here in backtick we can also apply style classes here
 // this pass the current element 
 
-li.innerHTML=`<div><p>${input.value}</p>
-<button onclick="removeTodo(this)" type= "button">Remove</button></div>`;
+li.innerHTML=`${input.value}
+<button onclick="removeTodo(this)" type= "button">Remove</button>`;
 
 // adding li in list
 list.appendChild(li);
