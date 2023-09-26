@@ -10,8 +10,8 @@ function addTodo() {
         taskItem.classList.add("task-item");
         taskItem.innerHTML = `
         <div class="input-container d-flex">
-            <input type="text" class="form-control" value="${taskText}" readonly>
-            <i  onclick="removeTodo(this)" class="fas fa-trash-alt"></i> 
+            <input type="text" class="form-control my-2" value="${taskText}" readonly>
+            <i w-50 img-fluid onclick="removeTodo(this)" class="fas fa-trash-alt"></i> 
         </div>
     `;
 
@@ -39,4 +39,9 @@ function removeTodo(i)
   //  console.log(i);
   // console.log(i.parentNode);
   console.log(i.parentNode.remove());
+}
+
+//   making remove function for all todo list items
+function removeAllTodos() {
+    todoList.innerHTML = '';
 }
