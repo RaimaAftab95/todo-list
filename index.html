@@ -15,43 +15,32 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div class="container bg-danger-subtle">
-            <div class="row">
-                <div class="col text-center justify-content-center"><h1>Todo List</h1></div>
-            </div>
-            
-            <div class="row w-100">
-                <div class="col-8">
-                    <div class="mb-3">
-                        <label for="inp" class="form-label">Add your task here:</label>
-                        <!-- acess id inp -->
-                        <!-- adding class input -->
-                        <input type="text" class="form-control input " id="inp" placeholder="Add your work to do.......">
-                      </div>
-                      </div>
-                      <div class="col">
-                        <!-- justify-content-md-end mt-3 -->
-                      <div class="d-grid gap-2 d-md-flex">
+        <div class="container">
+            <div class="form-group">
+            <h1>Todo List</h1>
+          
+                 <div class="d-flex">
+                        <input type="text" class="form-control" id="inp" placeholder="Add your work to do.......">
                         <!-- function Add onclick -->
-                        <button onclick="addTodo()" class="btn btn-primary me-md-2 mt-4" type="button" id="addbtn">Add Todo</button>
-                        <!-- delete all todo list button -->
-                       <button onclick="removeAllTodos()" class="btn btn-danger me-md-2 mt-4" type="button">Delete All</button>
-                      </div>
-                    </div>   
+                        <button onclick="addTodo()" class="btn add-btn float-end" type="button"><i class="fas fa-plus"></i></button> 
             </div>
-            <p class="validator"></p>
-            <div class="row m-5"> 
-                <div class="col-8">
-                    <!-- added todo items will be displayed here -->
-                    <div id="todo-list"></div>
-                </div>
             </div>
+            <!-- show msg if input field is empty -->
+             <p class="validator"></p>
+
+               <!-- added todo items will be displayed here -->
+               <div id="todo-list"></div>
+
+           <!-- delete all todo list -->
+           <!-- fs-2:font size &  fa-2x:icon size-->
+           <div class="text-center">
+            <button  onclick="removeAllTodos()" id="deleteAll" class="delete-all-btn p-2"><i class="fas fa-trash "></i> Delete All</button>
+        </div>
         </div>
     </div> 
     
-
+    <!-- adding script -->
     <script src="script.js"></script>
-
     <!-- bootstrap js file -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>

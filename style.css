@@ -7,6 +7,55 @@
     padding: 0;
 }
 
-i{
-    background-color: aqua;
+body {
+    background-color: #593e84!important; /* Dark Purple Background */
+    color: #fff!important;
+    text-align: center!important;
+    padding: 20px;
+}
+.validator {
+    text-align: left;
+    color:#593e84;
+}
+ /* .container-fluid {
+    background-color: #593e84; 
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+} */
+
+.container {
+    background-color: #a27fe0; /* Light Purple Container */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    border-radius: 25px !important;
+}
+ /* Add bullet dots for each TODO item */
+
+ .list-group-item > div::before {
+    content: "*";
+    color: #7c4dcc!important; /* Dark Purple Bullet Color */
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+}
+.add-btn, .delete-all-btn, .edit-btn, .trash-btn {
+    border-radius: 25px!important;
+    background-color: #7c4dcc !important; /* Dark Purple Button */
+    color: #fff !important;
+    border: none;
+    cursor: pointer;
+}
+
+.add-btn:hover, .delete-all-btn:hover, .edit-btn:hover, .trash-btn:hover {
+    background-color: #593e84; /* Dark Purple Button Hover */
 }

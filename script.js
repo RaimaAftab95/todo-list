@@ -1,47 +1,44 @@
+
 const input = document.getElementById("inp");
 const validator = document.querySelector(".validator");
 const todoList = document.getElementById("todo-list");
 
 function addTodo() {
-    if (input.value !== "")
+    if (input.value !== "") 
      {
         const taskText = input.value;
         const taskItem = document.createElement("div");
-        taskItem.classList.add("task-item");
-        taskItem.innerHTML = `
-        <div class="input-container d-flex">
-            <input type="text" class="form-control my-2" value="${taskText}" readonly>
-            <i w-50 img-fluid onclick="removeTodo(this)" class="fas fa-trash-alt"></i> 
-        </div>
-    `;
+        // taskItem.classList.add("task-item");
+        taskItem.classList.add("list-group-item");
 
+taskItem.innerHTML = `<div class="input-container w-100 my-2 d-flex">
+        <input type="text" class="form-control" value="${taskText}" readonly>
+        <button class="btn edit-btn p-2 btn-sm edit-todo float-end">
+        <i class="fas fa-edit"></i>
+    </button>
+    <button class="btn trash-btn btn-sm p-2 delete-todo float-end"  onclick="removeTodo(this)">
+        <i class="fas fa-trash"></i>
+    </button> 
+    </div>`;
         // Append the task item to the todo list
         todoList.appendChild(taskItem);
-
+       // Clear the input field and hide the error message
         input.value = "";
         validator.textContent = "";
     }
-     else {
-        validator.textContent = "Empty input";
+
+    else
+    {
+        validator.textContent = "Please enter todo task";
     }
 }
 
-// function removeTodoItem(button) {
-//     const taskItem = button.parentNode.parentNode;
-//     // Remove the task item from the todo list
-//     todoList.removeChild(taskItem);
-// }
-
-//   making remove function for trash icon
+//   making remove function
 function removeTodo(i)
 {
-  // alert("remove todo");
-  //  console.log(i);
-  // console.log(i.parentNode);
-  console.log(i.parentNode.remove());
+console.log(i.parentNode.remove());
 }
-
 //   making remove function for all todo list items
 function removeAllTodos() {
-    todoList.innerHTML = '';
+todoList.innerHTML = '';
 }
