@@ -15,7 +15,7 @@ body {
 }
 .validator {
     text-align: left;
-    color:#593e84;
+    color:red;
 }
  /* .container-fluid {
     background-color: #593e84; 
@@ -40,22 +40,22 @@ body {
 }
  /* Add bullet dots for each TODO item */
 
- .list-group-item > div::before {
+ /* .list-group-item > div::before {
     content: "*";
-    color: #7c4dcc!important; /* Dark Purple Bullet Color */
+    color: #7c4dcc!important; 
     margin-right: 5px;
     display: inline-block;
     vertical-align: middle;
     font-size: 20px;
-}
+} */
 .add-btn, .delete-all-btn, .edit-btn, .trash-btn {
     border-radius: 25px!important;
     background-color: #7c4dcc !important; /* Dark Purple Button */
     color: #fff !important;
-    border: none;
-    cursor: pointer;
+    border: none!important;
+    cursor: pointer!important;
 }
 
 .add-btn:hover, .delete-all-btn:hover, .edit-btn:hover, .trash-btn:hover {
-    background-color: #593e84; /* Dark Purple Button Hover */
+    background-color: #593e84 !important; /* Dark Purple Button Hover */
 }
