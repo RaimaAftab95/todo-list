@@ -2,7 +2,7 @@
 
 *{
     font-family: 'Poppins', sans-serif;
-    /* font-family: 'Skranji', cursive; */
+    font-family: 'Skranji', cursive;
     margin: 0;
     padding: 0;
 }
@@ -39,6 +39,8 @@ body {
     color: #fff !important;
     border: none!important;
     cursor: pointer!important;
+    width:50px;
+    height:50px;
 }
 
 .add-btn:hover, .delete-all-btn:hover, .edit-btn:hover, .trash-btn:hover {
@@ -49,10 +51,8 @@ body {
 
     width: 100%;
     border-radius: 5px !important;
-    /* background-color: #7c4dcc !important; */
     color: black !important;
     border: none !important;
-    /* cursor: pointer !important; */
     
 }
 .delete-all-btn
@@ -62,7 +62,7 @@ body {
        color: #fff !important;
        border: none !important;
        cursor: pointer !important;
-       width:100px;
-       height:50px;
+       width:120px!important;
+       height:50px!important;
    
    }

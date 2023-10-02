@@ -27,7 +27,7 @@ function addTodo() {
      {
         const taskText = "*\t"+ input.value;
         const taskItem = document.createElement("div");
-        taskItem.innerHTML = `<div class="input-container w-100 my-2 d-flex">
+        taskItem.innerHTML = `<div class="w-100 my-2 d-flex">
         <input type="text" class="form-control" value="${taskText}" readonly>
         <button class="btn edit-btn p-2 mx-1 btn-sm edit-todo float-end" onclick="editTodo(this)" >
         <i class="fas fa-edit"></i></button>
