@@ -30,11 +30,11 @@ body {
 }
 
 .form-control {
-    border-radius: 25px !important;
+    border-radius: 5px !important;
 }
  
 .add-btn, .edit-btn, .trash-btn {
-    border-radius: 25px!important;
+    border-radius: 5px!important;
     background-color: #7c4dcc !important; /* Dark Purple Button */
     color: #fff !important;
     border: none!important;
@@ -48,7 +48,7 @@ body {
 .editing {
 
     width: 100%;
-    border-radius: 25px !important;
+    border-radius: 5px !important;
     /* background-color: #7c4dcc !important; */
     color: black !important;
     border: none !important;
@@ -57,7 +57,7 @@ body {
 }
 .delete-all-btn
 {
-    border-radius: 25px !important;
+    border-radius: 5px !important;
        background-color: #7c4dcc !important; /* Dark Purple Button */
        color: #fff !important;
        border: none !important;

@@ -27,18 +27,12 @@ function addTodo() {
      {
         const taskText = "*\t"+ input.value;
         const taskItem = document.createElement("div");
-        // taskItem.classList.add("task-item");
-        // taskItem.classList.add("list-group-item");
-
-taskItem.innerHTML = `<div class="input-container w-100 my-2 d-flex">
+        taskItem.innerHTML = `<div class="input-container w-100 my-2 d-flex">
         <input type="text" class="form-control" value="${taskText}" readonly>
         <button class="btn edit-btn p-2 mx-1 btn-sm edit-todo float-end" onclick="editTodo(this)" >
-        <i class="fas fa-edit"></i>
-    </button>
-    <button class="btn trash-btn  p-2 delete-todo float-end"  onclick="removeTodo(this)">
-        <i class="fas fa-trash"></i>
-    </button> 
-    </div>`;
+        <i class="fas fa-edit"></i></button>
+         <button class="btn trash-btn  p-2 delete-todo float-end"  onclick="removeTodo(this)">
+        <i class="fas fa-trash"></i></button> </div>`;
         // Append the task item to the todo list
         todoList.appendChild(taskItem);
        // Clear the input field and hide the error message
@@ -85,25 +79,15 @@ function removeAllTodos()
 {
   if(  item.textContent=="Done")
   {
-// console.log('if condition',item.previousElementSibling);
 const todoName = item.previousElementSibling.value;
 let span= document.createElement("span");
-
-
-// updated todo  ---"*\t"+
 span.textContent=  todoName;
 item.parentElement.replaceChild(span,item.previousElementSibling);
-// item.textContent="edit";
-// clear previous span
-// span.innerHTML= '';
-
-item.innerHTML=`<button class="btn edit-btn p-2 mx-1 btn-sm edit-todo float-end" onclick="editTodo(this)" >
-<i class="fas fa-edit"></i>`;
+item.innerHTML=`<i class="fas fa-edit"></i>`;
 item.classList.add("edit-btn","btn", "p-2", "btn-sm" ,"edit-todo", "float-end");
-         span.classList.add("editing","w-100","form-control","d-flex");
+span.classList.add("editing","w-100","form-control","d-flex");
 
-
-    }
+ }
 
     // edit mode
   else
