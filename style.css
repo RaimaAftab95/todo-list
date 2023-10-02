@@ -17,12 +17,6 @@ body {
     text-align: left;
     color:red;
 }
- /* .container-fluid {
-    background-color: #593e84; 
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-} */
 
 .container {
     background-color: #a27fe0; /* Light Purple Container */
@@ -38,17 +32,8 @@ body {
 .form-control {
     border-radius: 25px !important;
 }
- /* Add bullet dots for each TODO item */
-
- /* .list-group-item > div::before {
-    content: "*";
-    color: #7c4dcc!important; 
-    margin-right: 5px;
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 20px;
-} */
-.add-btn, .delete-all-btn, .edit-btn, .trash-btn {
+ 
+.add-btn, .edit-btn, .trash-btn {
     border-radius: 25px!important;
     background-color: #7c4dcc !important; /* Dark Purple Button */
     color: #fff !important;
@@ -59,3 +44,25 @@ body {
 .add-btn:hover, .delete-all-btn:hover, .edit-btn:hover, .trash-btn:hover {
     background-color: #593e84 !important; /* Dark Purple Button Hover */
 }
+
+.editing {
+
+    width: 100%;
+    border-radius: 25px !important;
+    /* background-color: #7c4dcc !important; */
+    color: black !important;
+    border: none !important;
+    /* cursor: pointer !important; */
+    
+}
+.delete-all-btn
+{
+    border-radius: 25px !important;
+       background-color: #7c4dcc !important; /* Dark Purple Button */
+       color: #fff !important;
+       border: none !important;
+       cursor: pointer !important;
+       width:100px;
+       height:50px;
+   
+   }
