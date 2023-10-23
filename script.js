@@ -28,7 +28,9 @@ function addTodo() {
         const taskText = "*\t"+ input.value;
         const taskItem = document.createElement("div");
         taskItem.innerHTML = `<div class="w-100 my-2 d-flex">
-        <input type="text" class="form-control" value="${taskText}" readonly>
+        
+        <input type="text" class="form-control w-100" value="${taskText}" readonly>
+        
         <button class="btn edit-btn p-2 mx-1 btn-sm edit-todo float-end" onclick="editTodo(this)" >
         <i class="fas fa-edit"></i></button>
          <button class="btn trash-btn  p-2 delete-todo float-end"  onclick="removeTodo(this)">
@@ -77,7 +79,9 @@ function removeAllTodos()
 // edit function
     function editTodo(item)
 {
-  if(  item.textContent=="Done")
+  //if(  item.textContent=="Done")
+  // replacing done text with icon
+  if (item.childNodes[1].textContent.includes("fa-check"))
   {
 const todoName = item.previousElementSibling.value;
 let span= document.createElement("span");
@@ -94,7 +98,9 @@ span.classList.add("editing","w-100","form-control","d-flex");
   {
 const todoName =item.previousElementSibling.textContent;
 console.log(todoName);
-item.textContent="Done";
+//item.textContent="Done";
+// adding fontawsome icon instead of text done
+item.innerHTML = `<i class="fa-solid fa-check"></i>`;
 let newinput= document.createElement("input");
   newinput.type="text";
   newinput.value= "*\t"+todoName;
